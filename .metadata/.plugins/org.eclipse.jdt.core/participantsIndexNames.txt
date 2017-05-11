@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+D:\Poetry\Poetry\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3208359314.index
+\PoetryServer\src

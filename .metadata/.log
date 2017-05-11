@@ -1,0 +1,531 @@
+!SESSION 2017-05-11 19:08:32.747 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -data D:\Poetry\Poetry -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.equinox.simpleconfigurator 4 0 2017-05-11 19:08:34.943
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: org.eclipse.equinox.internal.simpleconfigurator.Activator 中的意外。束 org.eclipse.equinox.simpleconfigurator 中的 start() 
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:734)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+Caused by: java.lang.NumberFormatException: For input string: "plugins/org.eclipse.core.net.linux.x86_64.nl_zh_4.3.0.v20131123020001.jar"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.parseBundleInfoLine(SimpleConfiguratorUtils.java:138)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.readConfiguration(SimpleConfiguratorUtils.java:75)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.readConfiguration(SimpleConfiguratorUtils.java:41)
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:52)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:182)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:196)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:48)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	... 12 more
+Root exception:
+java.lang.NumberFormatException: For input string: "plugins/org.eclipse.core.net.linux.x86_64.nl_zh_4.3.0.v20131123020001.jar"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.parseBundleInfoLine(SimpleConfiguratorUtils.java:138)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.readConfiguration(SimpleConfiguratorUtils.java:75)
+	at org.eclipse.equinox.internal.simpleconfigurator.utils.SimpleConfiguratorUtils.readConfiguration(SimpleConfiguratorUtils.java:41)
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:52)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:182)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:196)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:48)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2017-05-11 19:08:36.301
+!MESSAGE bundle org.eclipse.equinox.simpleconfigurator_1.0.400.v20130327-2119 [2] 不活动。
+
+!ENTRY org.eclipse.jface 2 0 2017-05-11 19:08:42.521
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:08:42.522
+!MESSAGE A conflict occurred for CTRL+F9:
+Binding(CTRL+F9,
+	ParameterizedCommand(Command(org.eclipse.mylyn.tasks.ui.command.activateTask,激活任务,
+		,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18e5cef7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F9,
+	ParameterizedCommand(Command(RunSQLAction,Run SQL,
+		Run SQL,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1776c6e6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.068
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.125
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.154
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.184
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.216
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.249
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.312
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.357
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.403
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.441
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2017-05-11 19:08:58.519
+!MESSAGE Installed snippet library: E:\myeclipse\configuration\org.eclipse.osgi\bundles\147\1\.cp\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 0 0 2017-05-11 19:09:01.763
+!MESSAGE Result of converting legacy STS 2.x workspace preferences to 3.x
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2017-05-11 19:09:01.763
+!MESSAGE Converted legacy STS plugin preferences
+!SUBENTRY 1 unknown 0 0 2017-05-11 19:09:01.763
+!MESSAGE OK
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2017-05-11 19:09:01.763
+!MESSAGE Converted legacy Roo plugin state locations
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2017-05-11 19:09:01.763
+!MESSAGE Converted legacy STS plugin state locations
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-05-11 19:09:24.143
+!MESSAGE Unable to update index for central|http://repo.maven.apache.org/maven2
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-05-11 19:09:38.137
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zhuyongchun'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.preferences 4 2 2017-05-11 19:09:46.256
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.equinox.preferences".
+!STACK 0
+java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key totalnumber
+	at java.util.ResourceBundle.getObject(ResourceBundle.java:395)
+	at java.util.ResourceBundle.getString(ResourceBundle.java:355)
+	at org.eclipse.wst.sse.core.internal.encoding.CommonCharsetNames.initHashTables(CommonCharsetNames.java:233)
+	at org.eclipse.wst.sse.core.internal.encoding.CommonCharsetNames.getEncodings(CommonCharsetNames.java:148)
+	at org.eclipse.wst.sse.core.internal.encoding.CommonCharsetNames.getPreferredDefaultIanaName(CommonCharsetNames.java:191)
+	at org.eclipse.jst.jsp.core.internal.preferences.JSPCorePreferenceInitializer.initializeDefaultPreferences(JSPCorePreferenceInitializer.java:37)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper$1.run(PreferenceServiceRegistryHelper.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.runInitializer(PreferenceServiceRegistryHelper.java:303)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:131)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:111)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:90)
+	at org.eclipse.wst.sse.core.internal.encoding.ContentBasedPreferenceGateway.getDefaultPreferences(ContentBasedPreferenceGateway.java:75)
+	at org.eclipse.wst.sse.core.internal.encoding.ContentBasedPreferenceGateway.getDefaultPreferences(ContentBasedPreferenceGateway.java:96)
+	at org.eclipse.wst.sse.core.internal.encoding.ContentBasedPreferenceGateway.getPreferencesString(ContentBasedPreferenceGateway.java:141)
+	at org.eclipse.wst.sse.core.internal.encoding.ContentTypeEncodingPreferences.getPreferredNewLineDelimiter(ContentTypeEncodingPreferences.java:57)
+	at org.eclipse.jst.jsp.core.internal.encoding.JSPDocumentLoader.getPreferredNewLineDelimiter(JSPDocumentLoader.java:258)
+	at org.eclipse.wst.sse.core.internal.document.AbstractDocumentLoader.createNewStructuredDocument(AbstractDocumentLoader.java:107)
+	at org.eclipse.wst.sse.core.internal.filebuffers.BasicStructuredDocumentFactory.createDocument(BasicStructuredDocumentFactory.java:65)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager$2.run(ResourceTextFileBufferManager.java:187)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager.createEmptyDocumentFromFactory(ResourceTextFileBufferManager.java:194)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager.createEmptyDocument(ResourceTextFileBufferManager.java:130)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.initializeFileBufferContent(ResourceTextFileBuffer.java:287)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:245)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getModel(FileBufferModelManager.java:786)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl._doCommonGetModel(ModelManagerImpl.java:545)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl._commonGetModel(ModelManagerImpl.java:509)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl._commonGetModel(ModelManagerImpl.java:482)
+	at org.eclipse.wst.sse.core.internal.model.ModelManagerImpl.getModelForRead(ModelManagerImpl.java:1440)
+	at org.eclipse.wst.sse.core.internal.validate.ValidatorGroupListener.validationStarting(ValidatorGroupListener.java:93)
+	at org.eclipse.wst.validation.internal.ValManager$2.run(ValManager.java:889)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.validation.internal.ValManager.notifyGroupListenersStarting(ValManager.java:887)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:842)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:703)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:301)
+	at org.eclipse.core.internal.resources.Resource$2.visit(Resource.java:126)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:127)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:95)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:52)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:124)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:108)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.fullBuild(ValBuilderJob.java:219)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:178)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.indent,更正缩进,
+		更正已选行的缩进,
+		Category(org.eclipse.jdt.ui.category.source,源,Java 源码操作,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@337b438f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,格式化活动元素,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ffd4898,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,格式,
+		格式化所选文本,
+		Category(org.eclipse.jdt.ui.category.source,源,Java 源码操作,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61907bb0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,格式,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c2cdafe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.enclosing,选择外层元素,
+		扩展选择以包括外层元素,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54a891da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,选择外层元素,
+		扩展选择以包括外层元素,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28cadb19,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.add.block.comment,添加块注释,
+		使用块注释包含选择的内容,
+		Category(org.eclipse.jdt.ui.category.source,源,Java 源码操作,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ffaaa2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,添加块注释,
+		添加块注释,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a749623,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.show.outline,快速大纲,
+		显示编辑器输入的快速大纲,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7b1b7544,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,快速大纲,
+		显示编辑器输入的快速大纲,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47b00280,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.matching.bracket,转至匹配的方括号,
+		将光标移至匹配的方括号,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74744644,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7db15616,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28e81d70,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.previous.member,转至上一个成员,
+		将插入标记移至编译单元的上一个成员,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58afed2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21740235,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.last,复原上一个选择,
+		复原上一个选择,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@685f8fd5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,复原上一个选择,
+		复原上一个选择,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40394485,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,切换注释,
+		切换所选行的注释,
+		Category(org.eclipse.jdt.ui.category.source,源,Java 源码操作,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@59dc1e7b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,切换注释,
+		切换注释,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@720950e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.next,选择下一个元素,
+		扩展选择以包括下一个同代,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2554b54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,选择下一个元素,
+		扩展选择以包括下一个同代,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a078d1e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.remove.block.comment,除去块注释,
+		除去括起选择的内容的块注释,
+		Category(org.eclipse.jdt.ui.category.source,源,Java 源码操作,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dc478fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,除去块注释,
+		除去块注释,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ff21fbe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.next.member,转至下一个成员,
+		将插入标记移至编译单元的下一个成员,
+		Category(org.eclipse.ui.category.navigate,导航,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3de3832b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42d0d4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-05-11 19:20:44.096
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.previous,选择上一个元素,
+		扩展选择以包括上一个同代,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23b89bcb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,选择上一个元素,
+		扩展选择以包括上一个同代,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78f5b81e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2017-05-11 19:46:53.498
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2017-05-11 19:46:53.499
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2017-05-11 19:46:53.499
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+
+!ENTRY com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:22.394
+!MESSAGE Error while saving XML contents to file D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:22.394
+!MESSAGE D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:31.392
+!MESSAGE Error while saving XML contents to file D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:31.392
+!MESSAGE D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:36.665
+!MESSAGE Error while saving XML contents to file D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 com.genuitec.eclipse.ast.deploy.core 4 0 2017-05-11 19:47:36.665
+!MESSAGE D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+!STACK 0
+java.io.FileNotFoundException: D:\Poetry\Poetry\.metadata\.plugins\com.genuitec.eclipse.ast.deploy.core\deployments.xml (拒绝访问。)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at com.genuitec.eclipse.core.util.XMLUtils$XMLWriter.save(XMLUtils.java:260)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager.writeToPreferences(DeploymentManager.java:566)
+	at com.genuitec.eclipse.ast.deploy.core.DeploymentManager$PersistDeploymentsJob.run(DeploymentManager.java:726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)

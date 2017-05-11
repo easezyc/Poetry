@@ -1,0 +1,5 @@
+SERVER_ENABLEMENT=true
+TOMCAT_BASE=E\:\\apache-tomcat-8.0.24
+TOMCAT_HOME=E\:\\apache-tomcat-8.0.24
+TOMCAT_TEMP=E\:\\apache-tomcat-8.0.24\\temp
+eclipse.preferences.version=1
