@@ -1,4 +1,4 @@
-package com.bnu.zhuyongchun.poetry.com.bnu.zhuyongchu.poetry.fragment;
+package com.bnu.zhuyongchun.poetry.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import com.bnu.zhuyongchun.poetry.R;
 /**
  * Created by zhuyongchun on 2017/5/8.
  */
-public class UserFragment extends Fragment {
+public class SearchFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View settingLayout = inflater.inflate(R.layout.user_page,
+        View settingLayout = inflater.inflate(R.layout.search_page,
                 container, false);
         return settingLayout;
     }
