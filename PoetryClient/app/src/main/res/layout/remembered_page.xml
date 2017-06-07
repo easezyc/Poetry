@@ -1,11 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/bkground3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="已背"
-        android:id="@+id/textView3" />
-</LinearLayout>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:textSize="32sp"
+        android:text="填空"
+        android:textColor="@color/blue"
+        android:id="@+id/btn_fillblank"
+        android:background="@drawable/button_border2"
+        android:layout_marginEnd="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/btn_chooce"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="选择"
+        android:id="@+id/btn_chooce"
+        android:textSize="32sp"
+        android:textColor="@color/blue"
+        android:background="@drawable/button_border2"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="117dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btn_fillblank" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="闯关模式"
+        android:id="@+id/btn_consist"
+        android:textSize="32sp"
+        android:textColor="@color/blue"
+        android:background="@drawable/button_border2"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/btn_fillblank"
+        android:layout_alignStart="@+id/btn_chooce" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="与好友PK"
+        android:id="@+id/btn_pk"
+        android:textSize="32sp"
+        android:textColor="@color/blue"
+        android:background="@drawable/button_border2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/btn_consist"
+        android:layout_toEndOf="@+id/btn_consist" />
+
+</RelativeLayout>

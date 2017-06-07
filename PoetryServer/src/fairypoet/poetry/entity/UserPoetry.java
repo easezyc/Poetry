@@ -1,15 +1,16 @@
 package fairypoet.poetry.entity;
 
 public class UserPoetry {
-	int uid,poetryid;
+	String uid;
+	int poetryid;
 	public UserPoetry(){
 		
 	}
-	public UserPoetry(int newuid,int newpoetryid){
+	public UserPoetry(String newuid,int newpoetryid){
 		poetryid=newpoetryid;
 		uid=newuid;
 	}
-	public void setUserPoetry(int newuid,int newpoetryid){
+	public void setUserPoetry(String newuid,int newpoetryid){
 		poetryid=newpoetryid;
 		uid=newuid;
 	}
@@ -19,10 +20,10 @@ public class UserPoetry {
 	public int getPoetryid(){
 		return poetryid;
 	}
-	public void setUid(int newuid){
+	public void setUid(String newuid){
 		uid=newuid;
 	}
-	public int getUid(){
+	public String getUid(){
 		return uid;
 	}
 }

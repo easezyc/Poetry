@@ -2,6 +2,7 @@ package com.bnu.zhuyongchun.poetry.activity;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -23,7 +24,10 @@ import com.bnu.zhuyongchun.poetry.entity.Config;
 import com.bnu.zhuyongchun.poetry.fragment.HomeFragment;
 import com.bnu.zhuyongchun.poetry.fragment.RememberedFragment;
 import com.bnu.zhuyongchun.poetry.fragment.SearchFragment;
+import com.bnu.zhuyongchun.poetry.fragment.AddnewfriendFragment;
+import com.bnu.zhuyongchun.poetry.fragment.MyfriendFragment;
 import com.bnu.zhuyongchun.poetry.fragment.UserFragment;
+import com.bnu.zhuyongchun.poetry.view.CustomFontTextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -34,11 +38,13 @@ public class MainActivity extends AppCompatActivity
     private FragmentManager fragmentManager;
     private ImageView homeImage,searchImage,rememberedImage,userImage;
     private TextView homeText,searchText,rememberedText,userText;
+    private AddnewfriendFragment addnewfriendFragment;
+    private MyfriendFragment myfriendFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        CustomFontTextView.setDefaultFont(this,"MONOSPACE","fonts/kaiti.ttf");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
 
@@ -121,18 +127,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_showmyfriend) {
+            setTabSelection(4);
+        } else if (id == R.id.nav_addfriend) {
+            setTabSelection(5);
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_exchange) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.nav_exit) {
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -169,48 +174,60 @@ public class MainActivity extends AppCompatActivity
         clearSelection();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         // 先隐藏掉所有的Fragment，以防止有多个Fragment显示在界面上的情况
-        hideFragments(transaction);
+        //hideFragments(transaction);
         switch (index) {
             case 0://选择主页
                 homeImage.setImageResource(R.drawable.home_selected);
                 homeText.setTextColor(Color.parseColor(Config.getConfig().getSelected_color()));
                 if (homeFragment == null) {
                     homeFragment = new HomeFragment();
-                    transaction.add(R.id.content, homeFragment);
-                } else {
-                    transaction.show(homeFragment);
+
                 }
+                transaction.replace(R.id.content, homeFragment);
                 break;
             case 1://点击搜索
                 searchImage.setImageResource(R.drawable.search_selected);
                 searchText.setTextColor(Color.parseColor(Config.getConfig().getSelected_color()));
                 if (searchFragment == null) {
                     searchFragment = new SearchFragment();
-                    transaction.add(R.id.content, searchFragment);
-                } else {
-                    transaction.show(searchFragment);
+
                 }
+                transaction.replace(R.id.content, searchFragment);
+
                 break;
             case 2://点击已背
                 rememberedImage.setImageResource(R.drawable.remember_selected);
                 rememberedText.setTextColor(Color.parseColor(Config.getConfig().getSelected_color()));
                 if (rememberFragment == null) {
                     rememberFragment = new RememberedFragment();
-                    transaction.add(R.id.content, rememberFragment);
-                } else {
-                    transaction.show(rememberFragment);
+
                 }
+                transaction.replace(R.id.content, rememberFragment);
+
                 break;
             case 3://点击user
-            default:
                 userImage.setImageResource(R.drawable.user_selected);
                 userText.setTextColor(Color.parseColor(Config.getConfig().getSelected_color()));
                 if (userFragment == null) {
                     userFragment = new UserFragment();
-                    transaction.add(R.id.content, userFragment);
-                } else {
-                    transaction.show(userFragment);
+
                 }
+                transaction.replace(R.id.content, userFragment);
+
+                break;
+            case 4:
+                if (myfriendFragment == null) {
+                    myfriendFragment = new MyfriendFragment();
+
+                }
+                transaction.replace(R.id.content, myfriendFragment);
+                break;
+            case 5:
+                if (addnewfriendFragment == null) {
+                    addnewfriendFragment = new AddnewfriendFragment();
+
+                }
+                transaction.replace(R.id.content, addnewfriendFragment);
                 break;
         }
         transaction.commit();
@@ -248,6 +265,12 @@ public class MainActivity extends AppCompatActivity
         }
         if (userFragment != null) {
             transaction.hide(userFragment);
+        }
+        if(myfriendFragment!=null){
+            transaction.hide(myfriendFragment);
+        }
+        if(addnewfriendFragment!=null){
+            transaction.hide(addnewfriendFragment);
         }
     }
 }

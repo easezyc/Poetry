@@ -1,11 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/bkground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView2"
+            android:background="@drawable/textview_border"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignEnd="@+id/progressBar"
+            android:layout_alignStart="@+id/progressBar"
+            android:layout_alignTop="@+id/textView6" />
+        <ProgressBar
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:secondaryProgress="80"
+            style="@style/ProgressBar_Mini"
+            android:id="@+id/progressBar"
+            android:background="@drawable/shape_progress_bar"
+            android:layout_gravity="center_horizontal|center"
+            android:indeterminate="false"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="67dp" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:text="开始背诗词"
+            android:textSize="22sp"
+            android:id="@+id/btn_beginremember"
+            android:background="@drawable/button_border"
+            android:layout_below="@+id/textView10"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_showremember" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:text="诗词总数"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="bottom"
+        android:id="@+id/textView6"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="zhuye"
-        android:id="@+id/textView2" />
-</LinearLayout>
+        android:text="已背诗词"
+        android:layout_marginTop="60dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="bottom"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/textView7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textView6" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="0首"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/textView8"
+        android:layout_marginStart="50dp"
+        android:layout_alignBottom="@+id/progressBar"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="0首"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/done_num"
+        android:layout_marginEnd="40dp"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="已完成"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/textView10"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/textView7" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:text="已背诗词"
+        android:id="@+id/btn_showremember"
+        android:textSize="22sp"
+        android:background="@drawable/button_border"
+        android:layout_below="@+id/textView10"
+        android:layout_marginEnd="10dp"
+        android:layout_alignStart="@+id/textView10" />
+
+
+</RelativeLayout>

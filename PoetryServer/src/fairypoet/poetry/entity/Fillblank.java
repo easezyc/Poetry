@@ -11,6 +11,11 @@ public class Fillblank {
 		start=newstart;
 		length=newlength;
 	}
+	public Fillblank(int newpoetryid,int newstart,int newlength){
+		poetryid=newpoetryid;
+		start=newstart;
+		length=newlength;
+	}
 	public void setFillblank(int newpoetryid,int newproblemid,int newstart,int newlength){
 		poetryid=newpoetryid;
 		problemid=newproblemid;

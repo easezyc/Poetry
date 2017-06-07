@@ -52,11 +52,11 @@ public class LoginTask extends AsyncTask<String, Integer, String>{
                 .ignoreContentType(true).timeout(1000).method(Connection.Method.POST).execute();
 
             JsonObject returnData = new JsonParser().parse(res.body()).getAsJsonObject();
-            name=returnData.get("username").toString();
+            name=returnData.get("username").getAsString();
         }
         catch(Exception e)
         {
-            Log.i("aa",e.toString());
+
         }
         return name;
     }

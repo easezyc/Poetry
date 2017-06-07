@@ -112,6 +112,7 @@ public class LoginFragment extends Fragment {
                 }
                 else{
                     loginSuc();
+                    User.getUser().setUsername(result);
                 }
             }
         });

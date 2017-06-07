@@ -1,0 +1,112 @@
+package fairypoet.poetry.control.pk;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
+import fairypoet.poetry.biz.PkService;
+import fairypoet.poetry.entity.PK;
+
+public class GetTimeSvt extends HttpServlet {
+
+	/**
+	 * Constructor of the object.
+	 */
+	public GetTimeSvt() {
+		super();
+	}
+
+	/**
+	 * Destruction of the servlet. <br>
+	 */
+	public void destroy() {
+		super.destroy(); // Just puts "destroy" string in log
+		// Put your code here
+	}
+
+	/**
+	 * The doGet method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to get.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String email=request.getParameter("email");
+		int mark=Integer.parseInt(request.getParameter("mark"));
+		PK pk=new PK();
+		pk.SetEmailnum(mark);
+		if(mark==1){
+			pk.SetEmail1(email);
+		}
+		else{
+			pk.SetEmail2(email);
+		}
+		PkService service=new PkService();
+		try {
+			pk=service.GetTime(pk);
+		} catch (ClassNotFoundException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+		JSONObject jsonStr = new JSONObject();
+		jsonStr.put("backnews",pk.GetBacknews());
+		jsonStr.put("wrongnum1",pk.GetWrongnum1());
+		jsonStr.put("wrongnum2",pk.GetWrongnum2());
+		jsonStr.put("time1",pk.GetTime1());
+		jsonStr.put("time2",pk.GetTime2());
+		jsonStr.put("email1",pk.GetEmail1());
+		jsonStr.put("email2",pk.GetEmail2());
+		PrintWriter out = null;
+		try {
+		    out = response.getWriter();
+		    out.print(jsonStr.toString());
+			} catch (IOException e) {
+			    e.printStackTrace();
+			} finally {
+			    if (out != null) {
+			        out.close();
+			    }
+			}
+	}
+
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doGet(request,response);
+	}
+
+	/**
+	 * Initialization of the servlet. <br>
+	 *
+	 * @throws ServletException if an error occurs
+	 */
+	public void init() throws ServletException {
+		// Put your code here
+	}
+
+}

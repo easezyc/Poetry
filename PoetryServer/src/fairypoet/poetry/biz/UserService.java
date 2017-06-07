@@ -49,4 +49,12 @@ public class UserService extends DBconnection{
 		closeConn();
 		return mark;
 	}
+	public String getPwd(String id)throws ClassNotFoundException, SQLException{
+		conn=getCon();
+		String pwd="";
+		Userdao dao=new Userdao();
+		pwd=dao.getPwd(conn,id);
+		closeConn();
+		return pwd;
+	}
 }

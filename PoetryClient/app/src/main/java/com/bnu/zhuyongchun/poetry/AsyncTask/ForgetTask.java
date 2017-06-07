@@ -40,12 +40,11 @@ public class ForgetTask extends AsyncTask<String, Integer, String>{
     @Override
     protected String doInBackground(String... params) {//两个参数邮箱和密码
         String email=params[0];
-        String password="aaa";
+        String password="";
         try{
-            Connection.Response res = Jsoup.connect("http://202.112.88.39:8080/test1/servlet/login").data("Email",email)
+            Connection.Response res = Jsoup.connect("http://202.112.88.39:8080/PoetryServer/servlet/ForgetPwdSvt").data("uid",email)
                     .ignoreContentType(true).timeout(1000).method(Connection.Method.POST).execute();
-            JsonObject returnData = new JsonParser().parse(res.body()).getAsJsonObject();
-            password=returnData.get("password").toString();
+            password=res.body().toString();
         }
         catch(Exception e)
         {

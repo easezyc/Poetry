@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@mipmap/bkground3">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="@string/app_name"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView class="com.bnu.zhuyongchun.poetry.view.CustomFontTextView"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/poetry_name"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.03" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/poet_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09" />
+
+    <TextView
+        android:layout_width="152dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/poetry_content"
+        android:layout_weight="0.09" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:text="@string/finish"
+        android:textSize="20sp"
+        android:id="@+id/finish_remember"
+        android:background="@mipmap/frame3"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:text="@string/next_poetry"
+        android:textSize="20sp"
+        android:id="@+id/btn_nextpoetry"
+        android:background="@mipmap/frame3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.01" />
+
+</LinearLayout>

@@ -29,18 +29,6 @@ public class Userdao {
 		}
 		return mark;
 	}
-	/*public int selectPassword(Connection conn,User user) throws SQLException {
-		sql=conn.createStatement();
-		int mark=0;
-		String condition="Select *from users where uid ='"+user.getUid()+"' and password ='"+user.getPassword()+"'";
-		rs=sql.executeQuery(condition);
-		while(rs.next()){
-			//user.setUid(rs.getString(1));
-			user.setUname(rs.getString(2));
-			mark=1;
-		}
-		return mark;
-	}*/
 	public int changePassword(Connection conn, User user) throws SQLException {
 		sql=conn.createStatement();
 		int mark=0;
@@ -65,5 +53,15 @@ public class Userdao {
 			mark=1;
 		}
 		return mark;
+	}
+	public String getPwd(Connection conn,String id)throws SQLException{
+		sql=conn.createStatement();
+		String pwd="";
+		String condition="select * from users where uid ='"+id+"'";
+		rs=sql.executeQuery(condition);
+		while(rs.next()){
+			pwd=rs.getString(3);
+		}
+		return pwd;
 	}
 }

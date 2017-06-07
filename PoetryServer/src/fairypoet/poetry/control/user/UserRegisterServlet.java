@@ -14,9 +14,6 @@ import fairypoet.poetry.entity.User;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 
-/**
- * Servlet implementation class RegisterServlet
- */
 public class UserRegisterServlet extends HttpServlet {
 
     public UserRegisterServlet() {

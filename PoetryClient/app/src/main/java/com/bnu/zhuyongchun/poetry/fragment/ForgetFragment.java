@@ -59,7 +59,7 @@ public class ForgetFragment extends Fragment {
     public void submit() {
         hideKeyboard(getActivity());
 
-        progressDialog = ProgressDialog.show(getActivity(), "注册中", "正在注册...",
+        progressDialog = ProgressDialog.show(getActivity(), "loading", "正在查询...",
                 true);
         ForgetTask forgettask=new ForgetTask(new ForgetTask.OnLoginedListener() {
             @Override
@@ -77,7 +77,7 @@ public class ForgetFragment extends Fragment {
     public void submitFailed(){
         progressDialog.dismiss();
         Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                "网络连接失败，用户已被注册", Toast.LENGTH_LONG);
+                "网络连接失败，未找到相应用户", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

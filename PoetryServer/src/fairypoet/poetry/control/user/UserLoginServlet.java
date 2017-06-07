@@ -60,6 +60,7 @@ public class UserLoginServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			//jsonStr = "{\"backnews\":\"µÇÂ¼³É¹¦\"}";
 		}
 		else {
 			try {
@@ -68,6 +69,7 @@ public class UserLoginServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			//jsonStr = "{\"backnews\":\"µÇÂ¼Ê§°Ü\"}";
 		}
 		PrintWriter out = null;
 		try {

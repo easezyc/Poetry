@@ -43,8 +43,8 @@ public class SearchPoetryTask extends AsyncTask<String, Integer,List<Poetry>>{
         Gson gson = new Gson();
         ArrayList<Poetry> poetryArrayList = new ArrayList<>();
         try{
-            Connection.Response res = Jsoup.connect("http://202.112.88.39:8080/PoetryServer/servlet/UserPoetryServlet")
-                    .data("uid", User.getUser().getUseremail()).data("poetrynum","3")
+            Connection.Response res = Jsoup.connect("http://202.112.88.39:8080//PoetryServer/servlet/ShowAllpoetrySvt")
+                    .data("word",search)
                     .ignoreContentType(true).timeout(1000).method(Connection.Method.POST).execute();
             JsonParser parser = new JsonParser();
             JsonArray jsonArray = parser.parse(res.body()).getAsJsonArray();
@@ -59,8 +59,6 @@ public class SearchPoetryTask extends AsyncTask<String, Integer,List<Poetry>>{
         {
 
         }
-        Poetry p=new Poetry("11","礼拜","aaaa");
-        poetryArrayList.add(p);
         return poetryArrayList;
     }
 }

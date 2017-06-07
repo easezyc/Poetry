@@ -3,6 +3,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+
 import fairypoet.poetry.entity.*;
 
 public class Fillblankdao {
@@ -22,5 +24,27 @@ public class Fillblankdao {
 		}
 		return fillblank;
 	}
-	
+	public ArrayList<Fillblank> showProblem(Connection conn,int pnum)throws SQLException{
+		ArrayList<Fillblank> problemlist=new ArrayList<Fillblank>();
+		sql=conn.createStatement();
+		
+		try{
+			String sql2="Select * from fillblank where poetryid between 1 and '"+pnum+"' order by RAND() limit 5";
+			rs=sql.executeQuery(sql2);
+			while(rs.next()){
+				Fillblank fillblank=new Fillblank(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4));
+				problemlist.add(fillblank);
+			}
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
+		return problemlist;
+	}
+	public int InsertFillblank(Connection conn,Fillblank fillblank)throws SQLException{
+		int mark=0;
+		sql=conn.createStatement();
+		String condition="insert into fillblank (poetryid,start,length) values('"+fillblank.getPoetryid()+"','"+fillblank.getStart()+"','"+fillblank.getStart()+"')";		
+		mark=sql.executeUpdate(condition);
+		return mark;
+	}
 }

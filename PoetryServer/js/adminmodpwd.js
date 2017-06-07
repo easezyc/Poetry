@@ -1,0 +1,23 @@
+$(document).ready(function(){
+			$(".mod").addClass("hide");
+			$(".btn-check").click(function(){
+				$.ajax({
+    			url:"/PoetryServer/servlet/ChangeAdminPwdSvt",
+    			data:{adminid:$("#adminid").val(),newpwd:$("#new-pwd").val(),oldpwd:$("#old-pwd").val()},
+    			type:"POST",
+    			dataType:"json",
+    			success:function(data){
+        			if(data.backnews=="T"){
+        				alert("修改成功")
+        			}
+        			else{
+        				alert(data.backnews);
+        			}
+    			},
+    			error:function(){
+        			alert("请求失败");
+    			}
+			});
+			return false;
+			});
+		});

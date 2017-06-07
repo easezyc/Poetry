@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bkground3"
+    android:weightSum="1">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="@string/app_name"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="173dp"
+        android:text="New Text"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:maxLines="4"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/b"
+        android:id="@+id/tv_fillblank"
+        android:layout_weight="0.15" />
+
+    <EditText
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/et_fillblank" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center|center_horizontal">
+        <Button
+            android:layout_width="97dp"
+            android:layout_height="67dp"
+            android:text="@string/returnback"
+            android:background="@mipmap/frame3"
+            android:id="@+id/finish_fillblank" />
+
+        <Button
+            android:layout_width="97dp"
+            android:layout_height="67dp"
+            android:text="@string/ok"
+            android:id="@+id/next_fillblank"
+            android:background="@mipmap/frame3"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="97dp"
+            android:layout_height="67dp"
+            android:text="@string/look"
+            android:id="@+id/look_fillblank"
+            android:background="@mipmap/frame3"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textview_border3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.23"
+        android:id="@+id/fillblank_answer" />
+</LinearLayout>

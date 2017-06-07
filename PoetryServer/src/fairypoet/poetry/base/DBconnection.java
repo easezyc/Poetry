@@ -16,8 +16,8 @@ public class DBconnection {
 	}
 	public Connection getCon() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
-		String uri="jdbc:mysql://localhost/poetryconference?characterEncoding=utf-8";
- 		String user="root";
+		String uri="jdbc:mysql://202.112.88.39/poetryconference?characterEncoding=utf-8";
+ 		String user="zyc";
  		String databasepassword="123";
 		conn=DriverManager.getConnection(uri,user,databasepassword);	
 		conn.setAutoCommit(false);

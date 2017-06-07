@@ -10,10 +10,58 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
+    <description>ShowPoetrySvt</description>
+    <display-name>ShowPoetrySvt</display-name>
+    <servlet-name>ShowPoetrySvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.ShowPoetrySvt</servlet-class>
+  </servlet>
+   <servlet>
+    <description>InsertVerseSvt</description>
+    <display-name>InsertVerseSvt</display-name>
+    <servlet-name>InsertVerseSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.InsertVerseSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>InsertPoetrySvt</description>
+    <display-name>InsertPoetrySvt</display-name>
+    <servlet-name>InsertPoetrySvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.InsertPoetrySvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>ShowAllpoetrySvt</description>
+    <display-name>ShowAllpoetrySvt</display-name>
+    <servlet-name>ShowAllpoetrySvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.ShowAllpoetrySvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminRegisterSvt</description>
+    <display-name>AdminRegisterSvt</display-name>
+    <servlet-name>AdminRegisterSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.admin.AdminRegisterSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>ChangeAdminPwdSvt</description>
+    <display-name>ChangeAdminPwdSvt</display-name>
+    <servlet-name>ChangeAdminPwdSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.admin.ChangeAdminPwdSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>AdminLoginSvt</description>
+    <display-name>AdminLoginSvt</display-name>
+    <servlet-name>AdminLoginSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.admin.AdminLoginSvt</servlet-class>
+  </servlet>
+  <servlet>
     <description>CreateProblemServlet</description>
     <display-name>CreateProblemServlet</display-name>
     <servlet-name>CreateProblemServlet</servlet-name>
     <servlet-class>fairypoet.poetry.control.poetry.CreateProblemServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>ShowAllverseSvt</description>
+    <display-name>ShowAllverseSvt</display-name>
+    <servlet-name>ShowAllverseSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.ShowAllverseSvt</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CreateProblemServlet</servlet-name>
@@ -25,9 +73,25 @@
     <servlet-name>UserPoetryServlet</servlet-name>
     <servlet-class>fairypoet.poetry.control.poetry.UserPoetryServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>InsertFillblankSvt</description>
+    <display-name>InsertFillblankSvt</display-name>
+    <servlet-name>InsertFillblankSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.admin.InsertFillblankSvt</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>UserPoetryServlet</servlet-name>
     <url-pattern>/servlet/UserPoetryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>InsertSentence</description>
+    <display-name>InsertSentence</display-name>
+    <servlet-name>InsertSentence</servlet-name>
+    <servlet-class>fairypoet.poetry.control.admin.InsertSentence</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertSentence</servlet-name>
+    <url-pattern>/servlet/InsertSentence</url-pattern>
   </servlet-mapping>
   <servlet>
     <description>UserRegisterServlet</description>
@@ -69,4 +133,215 @@
     <servlet-name>ModUnameServlet</servlet-name>
     <url-pattern>/servlet/ModUnameServlet</url-pattern>
   </servlet-mapping>
+<servlet>
+    <description>ModUserPoetryServlet</description>
+    <display-name>ModUserPoetryServlet</display-name>
+    <servlet-name>ModUserPoetryServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.ModUserPoetryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModUserPoetryServlet</servlet-name>
+    <url-pattern>/servlet/ModUserPoetryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>LearnedPoetryServlet</description>
+    <display-name>LearnedPoetryServlet</display-name>
+    <servlet-name>LearnedPoetryServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.LearnedPoetryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearnedPoetryServlet</servlet-name>
+    <url-pattern>/servlet/LearnedPoetryServlet</url-pattern>
+  </servlet-mapping>
+<servlet>
+    <description>LearnedPnumServlet</description>
+    <display-name>LearnedPnumServlet</display-name>
+    <servlet-name>LearnedPnumServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.LearnedPnumServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearnedPnumServlet</servlet-name>
+    <url-pattern>/servlet/LearnedPnumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>AddFriendServlet</description>
+    <display-name>AddFriendServlet</display-name>
+    <servlet-name>AddFriendServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.AddFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFriendServlet</servlet-name>
+    <url-pattern>/servlet/AddFriendServlet</url-pattern>
+  </servlet-mapping>
+<servlet>
+    <description>ShowFriendServlet</description>
+    <display-name>ShowFriendServlet</display-name>
+    <servlet-name>ShowFriendServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.ShowFriendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FillblankServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.FillblankServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindFillblankServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.FindFillblankServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SentenceServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.SentenceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindSentenceServlet</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.FindSentenceServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ShowFriendServlet</servlet-name>
+    <url-pattern>/servlet/ShowFriendServlet</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowPoetrySvt</servlet-name>
+    <url-pattern>/servlet/ShowPoetrySvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllpoetrySvt</servlet-name>
+    <url-pattern>/servlet/ShowAllpoetrySvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertPoetrySvt</servlet-name>
+    <url-pattern>/servlet/InsertPoetrySvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminRegisterSvt</servlet-name>
+    <url-pattern>/servlet/AdminRegisterSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeAdminPwdSvt</servlet-name>
+    <url-pattern>/servlet/ChangeAdminPwdSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginSvt</servlet-name>
+    <url-pattern>/servlet/AdminLoginSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InsertFillblankSvt</servlet-name>
+    <url-pattern>/servlet/InsertFillblankSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllverseSvt</servlet-name>
+    <url-pattern>/servlet/ShowAllverseSvt</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>InsertVerseSvt</servlet-name>
+    <url-pattern>/servlet/InsertVerseSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FillblankServlet</servlet-name>
+    <url-pattern>/servlet/FillblankServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindFillblankServlet</servlet-name>
+    <url-pattern>/servlet/FindFillblankServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SentenceServlet</servlet-name>
+    <url-pattern>/servlet/SentenceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindSentenceServlet</servlet-name>
+    <url-pattern>/servlet/FindSentenceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>QueryEmail2Svt</description>
+    <display-name>QueryEmail2Svt</display-name>
+    <servlet-name>QueryEmail2Svt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.QueryEmail2Svt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>CreatePKSvt</description>
+    <display-name>CreatePKSvt</display-name>
+    <servlet-name>CreatePKSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.CreatePKSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>QueryEmail1Svt</description>
+    <display-name>QueryEmail1Svt</display-name>
+    <servlet-name>QueryEmail1Svt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.QueryEmail1Svt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>SetTimeSvt</description>
+    <display-name>SetTimeSvt</display-name>
+    <servlet-name>SetTimeSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.SetTimeSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>GetTimeSvt</description>
+    <display-name>GetTimeSvt</display-name>
+    <servlet-name>GetTimeSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.GetTimeSvt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>DeleteSvt</description>
+    <display-name>DeleteSvt</display-name>
+    <servlet-name>DeleteSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.pk.DeleteSvt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryEmail2Svt</servlet-name>
+    <url-pattern>/servlet/QueryEmail2Svt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreatePKSvt</servlet-name>
+    <url-pattern>/servlet/CreatePKSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryEmail1Svt</servlet-name>
+    <url-pattern>/servlet/QueryEmail1Svt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetTimeSvt</servlet-name>
+    <url-pattern>/servlet/SetTimeSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetTimeSvt</servlet-name>
+    <url-pattern>/servlet/GetTimeSvt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteSvt</servlet-name>
+    <url-pattern>/servlet/DeleteSvt</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>ForgetPwdSvt</description>
+    <display-name>ForgetPwdSvt</display-name>
+    <servlet-name>ForgetPwdSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.user.ForgetPwdSvt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetPwdSvt</servlet-name>
+    <url-pattern>/servlet/ForgetPwdSvt</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>GetPoetryNumSvt</description>
+    <display-name>GetPoetryNumSvt</display-name>
+    <servlet-name>GetPoetryNumSvt</servlet-name>
+    <servlet-class>fairypoet.poetry.control.poetry.GetPoetryNumSvt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPoetryNumSvt</servlet-name>
+    <url-pattern>/servlet/GetPoetryNumSvt</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
